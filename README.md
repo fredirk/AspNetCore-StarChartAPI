@@ -71,8 +71,8 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
     - This method should also set the `Satellites` property for each of the `CelestialObject`s returned.
     - This method should have an `HttpGet` attribute. 
     - This method should return `Ok` with a value of all `CelestialObjects`s.
-- [ ] Create `CelestialObjectControllers`'s Post, Put, Patch, and Delete actions
-  - [ ] Create the `Create` method
+- [X] Create `CelestialObjectControllers`'s Post, Put, Patch, and Delete actions
+  - [X] Create the `Create` method
     - This method should have a return type of `IActionResult` .
     - This method should accept a parameter of type `[FromBody]CelestialObject`. (Note: You will need to add a `using` directive for `StarChart.Models`) 
     - This method should have an `HttpPost` attribute. 
@@ -81,7 +81,7 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
       - `"GetById"`
       - A new `object` with an `id` of the `CelestialObject`'s `Id` (note: use the `new { }` format)
       - The newly created `CelestialObject`.
-  - [ ] Create the `Update` method
+  - [X] Create the `Update` method
     - This method should have a return type of `IActionResult` .
     - This method should accept a parameter of type `int` named `id` and a parameter of type `CelestialObject`. 
     - This method should have the `HttpPut` attribute with a value of `"{id}"`.
@@ -89,7 +89,7 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
       - If no match is found return `NotFound`.
       - If a match is found set it's `Name`, `OrbitalPeriod`, and `OrbitedObjectId` properties based on the provided `CelestialObject` parameter. Call `Update` on the `CelestialObjects` `DbSet` with an argument of the updated `CelestialObject`, and then call `SaveChanges`.
     - This method should return `NoContent`.
-  - [ ] Create the `RenameObject` method
+  - [X] Create the `RenameObject` method
     - This method should have a return type of `IActionResult`.
     - This method should accept a parameter of type `int` named `id` and a parameter of type `string` named `name`. 
     - This method should have the `HttpPatch` attribute with an argument of `"{id}/{name}"`. 
@@ -97,7 +97,7 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
       - If no match is found return `NotFound`.
       - If a match is found set it's `Name` property to the provided `name` parameter. Then call `Update` on the `CelestialObjects` `DbSet` with an argument of the updated `CelestialObject`, and then call `SaveChanges`.
     - This method should return `NoContent`.
-  - [ ] Create the `Delete` method
+  - [X] Create the `Delete` method
     - This method should have a return type of `IActionResult` 
     - This method should accept a parameter of type `int` named `id`. 
     - This method should have the `HttpDelete` attribute with an argument of `"{id}"`.
