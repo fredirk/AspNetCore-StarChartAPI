@@ -51,8 +51,8 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
   - [X] Add a `Route` attribute with a value of `""` and `ApiController` attribute to the `CelestialObjectController`.
   - [X] Create a new private readonly field of type `ApplicationDbContext` named `_context`. (Note: you will need to add a `using` directive for `StarChart.Data`)
   - [X] Create a constructor that accepts a parameter of type `ApplicationDbContext` and sets the `_context` field using the provided parameter.
-- [ ] Create all `CelestialObjectController`'s Get actions
-  - [ ] Create a new method `GetById` 
+- [X] Create all `CelestialObjectController`'s Get actions
+  - [X] Create a new method `GetById` 
     - This method should have a return type of `IActionResult` 
     - This method should accept a parameter of type `int` named `id`. 
     - This method should have an `HttpGet` attribute with an value of `"{id:int}"` and the `Name` property set to `"GetById"`. 
@@ -66,7 +66,7 @@ __Note:__ this isn't the only way to accomplish this, however; this is what the 
     - This method should return `NotFound` there is no `CelestialObject` with an `Name` property that matches the `name` parameter.
     - This method should also set the `Satellites` property for each `CelestialObject` who's `OrbitedObjectId` is the current `CelestialObject`'s `Id`.
     - This method should return an `Ok` with a value of the list of `CelestialObject` who's `Name` property matches the `name` parameter.
-  - [ ] Create the `GetAll` method
+  - [X] Create the `GetAll` method
     - This method should have a return type of `IActionResult`.
     - This method should also set the `Satellites` property for each of the `CelestialObject`s returned.
     - This method should have an `HttpGet` attribute. 
